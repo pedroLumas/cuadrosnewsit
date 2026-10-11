@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="description" content="Pintura de dominio público, siglos XV a XIX.">
+<title>Cuadros</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icono-192.png">
+<link rel="apple-touch-icon" href="icono-192.png">
+<link rel="stylesheet" href="estilo.css?v=20261011135647">
+</head>
+<body class="cargando">
+
+<header id="barra">
+  <h1>CUADROS</h1>
+  <input id="q" type="search" placeholder="Buscar" autocomplete="off" enterkeyhint="search" aria-label="Buscar">
+  <nav id="temas" aria-label="Temas"></nav>
+</header>
+
+<main>
+  <div id="rejilla"></div>
+  <p id="vacio" hidden>Nada con ese nombre.</p>
+  <div id="mas"></div>
+</main>
+
+<footer>Dominio público · <span id="cuenta"></span> · <button id="bloq" type="button">Bloquear</button></footer>
+
+<div id="v" hidden role="dialog" aria-modal="true" aria-label="Visor">
+  <img id="vi" alt="" draggable="false">
+  <div id="arriba" class="ui">
+    <span id="pos"></span>
+    <button id="bi" aria-label="Información">i</button>
+    <button id="bf" aria-label="Pantalla completa" hidden>⛶</button>
+    <button id="bx" aria-label="Cerrar">✕</button>
+  </div>
+  <div id="abajo" class="ui">
+    <b id="vt"></b>
+    <span id="va"></span>
+  </div>
+  <button id="ant" class="nav ui" aria-label="Anterior">‹</button>
+  <button id="sig" class="nav ui" aria-label="Siguiente">›</button>
+  <aside id="ficha" hidden>
+    <button id="fx" aria-label="Cerrar ficha">✕</button>
+    <div id="fc"></div>
+  </aside>
+</div>
+
+<div id="candado" hidden>
+  <form id="f-candado" autocomplete="off">
+    <h2 class="marca">CUADROS</h2>
+    <p>Escribe tu clave para entrar.<br>Solo te la pedirá una vez en este dispositivo.</p>
+    <input id="i-clave" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Clave" aria-label="Clave" enterkeyhint="go">
+    <button type="submit">Entrar</button>
+    <p class="err" id="e-clave" role="alert"></p>
+  </form>
+</div>
+
+<script src="app.js?v=20261011135647"></script>
+</body>
+</html>
