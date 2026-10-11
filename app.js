@@ -20,7 +20,7 @@ const CHUNK = 90;
 const enc = new TextEncoder(), dec = new TextDecoder();
 const deB64 = t => Uint8Array.from(atob(t), c => c.charCodeAt(0));
 const aB64 = u => btoa(String.fromCharCode(...u));
-const normClave = t => t.normalize('NFKC').trim().toLowerCase();
+const normClave = t => t.normalize('NFKC').replace(/\s+/g, '').toLowerCase();   // sin espacios ni mayúsculas
 const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (_) {} };
 const leer = k => { try { return localStorage.getItem(k); } catch (_) { return null; } };
 let KEY = null;
